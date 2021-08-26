@@ -1,7 +1,3 @@
-#----------------------------------------------------------------------------#
-# Imports
-#----------------------------------------------------------------------------#
-
 from flask import Flask, render_template, request
 # from flask.ext.sqlalchemy import SQLAlchemy
 import logging
@@ -96,6 +92,7 @@ if not app.debug:
 #----------------------------------------------------------------------------#
 
 # Default port:
+print(__name__)
 if __name__ == '__main__':
     app.run()
 
