@@ -11,4 +11,6 @@ DEBUG = True
 SECRET_KEY = 'my precious'
 
 # Connect to the database
-SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'database.db')
+# SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'database.db')
+SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:rememberthings@localhost:5432/gradesapp'
+SQLALCHEMY_TRACK_MODIFICATIONS = False
