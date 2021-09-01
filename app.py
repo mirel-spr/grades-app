@@ -26,8 +26,11 @@ def create_app():
     # Import Models -------------------------------------- #
 
     from project.models.classes import Class
+    from project.models.grade import Grade
     from project.models.school import School
     from project.models.student import Student
+    from project.models.subject import Area, Subject
+    from project.models.test import Test
     from project.models.user import User
 
     # flask db migrate

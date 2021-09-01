@@ -8,5 +8,6 @@ class Test(db.Model):
     taken_date = db.Column((db.DateTime))
     total_grade = db.Column(db.Integer)
     pass_grade = db.Column(db.Integer)
-    subject_id = db.Column(db.Integer, db.ForeignKey('subject.id'))
+    grades = db.relationship('Grade', cascade='all, delete')
+    subject_id = db.Column(db.Integer, db.ForeignKey('subjects.id'))
     school_id = db.Column(db.Integer, db.ForeignKey('schools.id'))

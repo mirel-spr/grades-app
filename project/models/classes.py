@@ -1,4 +1,3 @@
-from sqlalchemy.orm import backref
 from app import db
 
 class_student_xref = db.Table('class_student', db.Model.metadata,

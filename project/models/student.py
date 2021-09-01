@@ -9,6 +9,8 @@ class Student(db.Model):
     first_name = db.Column(db.String(20))
     created_date = db.Column(db.DateTime, default=datetime.utcnow())
     is_archived = db.Column(db.Boolean, default=False)
+    tests = db.relationship('Test')
+    grades = db.relationship('Grade', cascade='all, delete')
     school_id = db.Column(db.Integer, db.ForeignKey('schools.id'))
 
 
